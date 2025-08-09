@@ -3,19 +3,7 @@ Club Check-In Page
 
 INSTRUCTIONS:
 1) Replace the two CONFIG values below:
-   - FORM_ACTION: set to https://docs.google.com/forms/d/e/FORM_ID/formResponse
-     (use the FORM_ID from your Google Form's URL)
-   - ENTRY_NAME: set to the entry field name, e.g. entry.123456789
-     (you get this from Google Forms: Get pre-filled link -> copy & inspect the URL)
 
-2) Upload this single file to a static host (Netlify / Vercel / GitHub Pages).
-3) Use the hosted page URL on your NFC tag and as the QR code. The page:
-   - asks first-time users for a 4-digit code (keypad UI), stores it in localStorage,
-   - automatically submits that code to the Google Form in the background on future taps,
-   - submits silently to a hidden iframe so the page does not navigate away.
-
-Note: Google Forms requires that the form field exists (short answer). The POST target is
-https://docs.google.com/forms/d/e/FORM_ID/formResponse and the input name must be "entry.xxxx".
 -->
 
 <!doctype html>
@@ -65,6 +53,11 @@ https://docs.google.com/forms/d/e/FORM_ID/formResponse and the input name must b
   <!-- hidden iframe used to submit the Google Form so the page doesn't navigate -->
   <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
 
+   <form action="https://docs.google.com/forms/d/e/1FAIpQLSeNUhjwb2oFUmtfDaPdB3VvgCdC33cCUN5byjAC4ksv2e5axg/formResponse" method="POST" target="_blank">
+  <input name="entry.2042773400" value="Test User">
+  <button type="submit">Test Submit</button>
+</form>
+   
   <script>
     // ===== CONFIG =====
     const FORM_ACTION = "https://docs.google.com/forms/d/e/1FAIpQLSeNUhjwb2oFUmtfDaPdB3VvgCdC33cCUN5byjAC4ksv2e5axg/formResponse";
