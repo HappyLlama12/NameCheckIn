@@ -54,8 +54,8 @@ https://docs.google.com/forms/d/e/FORM_ID/formResponse and the input name must b
     <button id="submitBtn" class="action">Check In</button>
 
     <div class="row" style="justify-content:center;margin-top:10px">
-      <button id="clearBtn" class="key">Clear</button>
-      <button id="forgetBtn" class="key">Forget Me</button>
+      <button id="clearBtn" class="outlined-btn">Clear</button>
+      <button id="forgetBtn" class="outlined-btn">Forget Me</button>
     </div>
 
     <div id="status"></div>
@@ -75,7 +75,7 @@ https://docs.google.com/forms/d/e/FORM_ID/formResponse and the input name must b
     const clearBtn = document.getElementById('clearBtn');
     const forgetBtn = document.getElementById('forgetBtn');
     const status = document.getElementById('status');
-    const nameInput = document.getElementById('nameInput');
+    const nameInput = document.getElementById('fullName');
 
     function clearDisplay() {
       nameInput.value = '';
