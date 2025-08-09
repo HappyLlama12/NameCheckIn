@@ -21,14 +21,14 @@ INSTRUCTIONS:
     p.subtitle{margin:0 0 16px;color:var(--muted)}
     input[type=text]{width:100%;padding:8px;font-size:16px;margin-bottom:16px;border-radius:6px;border:1px solid #ccc;}
     button.action{width: 100%;height: 48px; background: var(--accent); color: white; border:0; border-radius: 8px; font-size: 18px; cursor: pointer;}
-    .outlined-btn{background: none; border: 2px solid var(--accent);color: var(--accent);border-radius: 6px;padding: 6px 12px;cursor: pointer;margin: 4px;font-size: 14px;}
+    .outlined-btn{background: #a5c2ff; border: 2px solid var(--accent);color: var(--accent);border-radius: 6px;padding: 6px 12px;cursor: pointer;margin: 4px;font-size: 14px;}
     #status{margin-top:10px;color:green;font-weight:600}
     .footer{margin-top:12px;font-size:12px;color:var(--muted);font-weight: 600}
     .danger{color:#b00020}
     .row{display:flex;gap:8px}
      .status-auto {
         color: #0b5cff; /* nice blue */
-        font-weight: 600;
+        font-weight: 800;
       }
   </style>
 </head>
@@ -53,10 +53,12 @@ INSTRUCTIONS:
   <!-- hidden iframe used to submit the Google Form so the page doesn't navigate -->
   <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
 
+  <!-- This is test code for submitting form
    <form action="https://docs.google.com/forms/d/e/1FAIpQLSeNUhjwb2oFUmtfDaPdB3VvgCdC33cCUN5byjAC4ksv2e5axg/formResponse" method="POST" target="_blank">
   <input name="entry.2042773400" value="Test User">
   <button type="submit">Test Submit</button>
 </form>
+  -->
    
   <script>
     // ===== CONFIG =====
@@ -127,8 +129,8 @@ INSTRUCTIONS:
     window.addEventListener("load", () => {
   const savedName = localStorage.getItem("clubName");
   if (savedName) {
-    nameInput.value = savedName; //keep filled for quick check-in
     status.classList.add("status-auto");
+    nameInput.value = savedName; //keep filled for quick check-in
     status.textContent = `Welcome back ${savedName}, you are checked in!`;
     submitGoogle(savedName);
     setTimeout(() => {clearDisplay(); status.textContent = ""; status.classList.remove("status-auto"); }, 5000);
