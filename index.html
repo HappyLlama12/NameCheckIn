@@ -15,7 +15,15 @@ INSTRUCTIONS:
   <style>
     :root{--bg:#f6f6f8;--card:#ffffff;--accent:#0b5cff;--muted:#666}
     html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial}
-    body{display:flex;align-items:center;justify-content:center;background:var(--bg);}
+    body{display:flex;align-items:center;justify-content:center;background:var(--bg);background-image: url('"C:\\Users\\heala\\OneDrive\\Pictures\\Screenshots\\Screenshot 2025-08-09 024045.png"');background-size:cover;background-position: center;background-repeat: no-repeat;min-height: 100vh;}
+    body::before {
+  content: "";
+  position: fixed;  /* or absolute */
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4); /* black with 40% opacity */
+  pointer-events: none;  /* lets clicks pass through */
+  z-index: 0;
+}
     .card{width:360px;max-width:92vw;background:var(--card);padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.08);text-align:center}
     h1{margin:0 0 8px;font-size:20px}
     input[type=text]{width:100%;padding:8px;font-size:16px;margin-bottom:16px;border-radius:6px;border:1px solid #ccc;}
