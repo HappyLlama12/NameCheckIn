@@ -55,13 +55,13 @@ INSTRUCTIONS:
     /* Only h1 uses Neue Montreal */
     h1 {
       margin: 0 0 0;             /* Remove bottom margin */
-      margin-bottom: 20px;       /* more space below heading */
+      margin-bottom: 1.33cm;       /* more space below heading */
       padding-bottom: 15px;      /* Add bottom padding */
       font-family: 'Neue Montreal', system-ui, sans-serif;
-      font-weight: bold;
+      font-weight: 700;
       font-style: normal;
       font-size: 52px;           /* Desktop font size */
-      line-height: 1em;
+      line-height: 1.3em;
       letter-spacing: -0.5px;
       color: rgb(5, 49, 154);    /* Optional: add this if you want the blue color */
     }
@@ -79,8 +79,15 @@ INSTRUCTIONS:
       z-index: 1;
     }
     .card{position: relative; z-index:2; width:360px;max-width:92vw;background:var(--card);padding:32px 24px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.08);text-align:center}
-    input[type=text]{width:100%;padding:8px;font-size:16px;margin-bottom:24px;border-radius:6px;border:1px solid #ccc;}
-    button.action{width: 100%;height: 48px; background-color: rgb(5,49,154); color: white; border: none; border-radius: 5px; padding: 12px 18px; font-family: 'Gilroy Bold', system-ui, sans-serif;font-size: 18px; cursor: pointer; letter-spacing: 0px; text-align: center; line-height: 1.2;}
+    input[type=text]{width:100%;padding:8px;font-size:16px;margin-bottom:1.5cm;border-radius:6px;border:1px solid #ccc;}
+    button.action{width: 100%;height: 48px; background-color: rgb(5,49,154); color: white; border: none; border-radius: 5px; padding: 12px 18px; font-family: 'Gilroy Bold', system-ui, sans-serif;font-size: 18px; cursor: pointer; letter-spacing: 0px; text-align: center; line-height: 1.2;margin-bottom: 1.5cm;}
+    .remember.container {
+      margin-bottom: 1.5cm;
+      margin-top: 1.5cm;
+      font-size: 14px;
+      line-height: 1.4cm;
+      color: rgb(12,17,21);
+    }
     .outlined-btn{background: #d3d3d3; border: 3px #363636;color: #363636;border-radius: 6px;padding: 6px 12px;cursor: pointer;margin: 4px;font-size: 14px;}
     #status{margin-top:10px;font-weight:600}
     .status-success {color: green;}
@@ -101,13 +108,13 @@ INSTRUCTIONS:
 
     <button id="submitBtn" class="action">Check In</button>
 
-    <div style="margin-top:14px; text-align:left;">
-      <label class="switch">
-        <input type="checkbox" id="rememberToggle" checked>
-        <span class="slider"></span>
-      </label>
-      <span style="margin-left:8px;">Remember my name for next time</span>
-    </div>
+    <div class="remember-container" style="text-align: left;">
+  <label class="switch">
+    <input type="checkbox" id="rememberToggle" checked>
+    <span class="slider"></span>
+  </label>
+  <span style="margin-left:8px; vertical-align: middle;">Remember my name for next time</span>
+</div>
 
     <style>
 .switch {
