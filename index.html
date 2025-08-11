@@ -82,10 +82,6 @@ INSTRUCTIONS:
 
     <button id="submitBtn" class="action">Check In</button>
 
-    <div class="row" style="justify-content:center;margin-top:10px">
-      <button id="clearBtn" class="outlined-btn">Clear</button>
-    </div>
-
     <div style="margin-top:10px; text-align:left;">
       <label class="switch">
         <input type="checkbox" id="rememberToggle" checked>
@@ -160,7 +156,6 @@ input:checked + .slider:before {
     // ==================
 
     const submitBtn = document.getElementById('submitBtn');
-    const clearBtn = document.getElementById('clearBtn');
     const status = document.getElementById('status');
     const nameInput = document.getElementById('fullName');
     const rememberToggle = document.getElementById('rememberToggle');
@@ -241,9 +236,10 @@ input:checked + .slider:before {
       }
     });
 
+    /*
     clearBtn.addEventListener('click', () => {
       clearDisplay();
-    });
+    }); */
 
     // ORRRRRR clearBtn.addEventListener('click', clearDisplay);
 
