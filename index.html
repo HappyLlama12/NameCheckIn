@@ -78,8 +78,8 @@ INSTRUCTIONS:
       pointer-events: none;  /* lets clicks pass through */
       z-index: 1;
     }
-    .card{position: relative; z-index:2; width:360px;max-width:92vw;background:var(--card);padding:32px 24px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.08);text-align:center}
-    input[type=text]{width:100%;padding:18px 14px;font-size:17px;margin-bottom:24px;border-radius:5px;border:none; background-color: rgb(248,248,248),box-sizing:border-box;}
+    .card{position: relative; z-index:2; width:360px;max-width:92vw;background:var(--card);padding:28px 24px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.08);text-align:center}
+    input[type=text]{width:100%;padding:18px 14px;font-size:17px;margin-bottom:24px;border-radius:5px;border:none; background-color: rgb(248,248,248); box-sizing:border-box;}
     input[type=text]:focus {
       outline: none;
       border-color: var(--accent);
@@ -105,12 +105,17 @@ INSTRUCTIONS:
     .remember-text {
       font-family: Gilroy, Arial, Helvetica, sans-serif;
       color: rgb(52, 58, 64);
-      font-weight: 400;  /* normal weight */
+      font-weight: 500;  /* normal weight */
       font-size: 17px;
       margin-left: 8px;
       user-select: none; /* optional, if you want to prevent text selection */
       vertical-align: middle; /* to align with the toggle nicely */
     }
+      #eraseLink {
+        margin-top: 24px;
+        font-size: 12px;
+        color: rgb(52,58,64);
+      }
   </style>
 </head>
 <body>
@@ -170,7 +175,7 @@ input:checked + .slider:before {
 }
 </style>
 
-    <div id="eraseLink" style="margin-top:25px; font-size:12px;">
+    <div id="eraseLink">
       If your name is currently saved and you want it to be erased click 
       <a href="#" id="eraseNow">here</a>.
     </div>
